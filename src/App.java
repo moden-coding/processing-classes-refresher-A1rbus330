@@ -6,6 +6,7 @@ public class App extends PApplet{
 
     public static void main(String[] args)  {
         PApplet.main("App");
+
     }
 
     public void settings(){
@@ -17,12 +18,19 @@ public class App extends PApplet{
     }
 
     public void draw(){
-
-
     }
 
     public void mousePressed(){
-        
+        float x = mouseX;
+        float y = mouseY;
+        Enemy enemy = new Enemy(this, x, y);
+        enemies.add(enemy);
+        displayEnemy();
+    }
+    public void displayEnemy(){
+                for(Enemy i: enemies){
+            circle(mouseX, mouseY, 50);
+        }
     }
 
 

@@ -10,8 +10,8 @@ public class Enemy {
         y = yPos;
         width = 150;
         height = 75;
-
     }
+    
 
     
     
